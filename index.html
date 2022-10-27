@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fok-ju-button</title>
+</head>
+<body>
+    <h1>Cedsi Fok ju button</h1>
+    <button id="button1">fok ju</button>
+    <style> 
+        button {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3rem;
+            background-color: blue;
+            color: pink;
+            height: 75px;
+            width: 200px;
+            position: absolute;
+            top: 300px;
+            left: 800px;
+        }
+    </style>
+    <script>
+        let button1 = document.getElementById("button1")
+        button1.onclick = () => {
+            alert("Du bisch en rise Fäze")
+        }
+        button1.onmouseover = () => {
+            let top = Math.random() * (window.innerHeight - button1.clientHeight)
+            let left = Math.random() * (window.innerWidth - button1.clientWidth)
+            console.log("Mouseover")
+            button1.style.left = `${left}px`
+            button1.style.top = `${top}px`
+        }
+    </script> 
+</body>
+</html>
